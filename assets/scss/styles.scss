@@ -317,31 +317,34 @@ img {
 /* CSS BARU UNTUK STACKING GAMBAR HOME */
 .home__img-stack {
   position: relative;
-  width: 300px;         /* Lebar wadah */
-  height: 320px;        /* Tinggi wadah (SESUAIKAN JIKA PERLU) */
-  justify-self: center;
+  display: flex;           /* Agar mudah align */
+  justify-content: center; /* Posisikan di tengah */
+  align-items: center;
+  width: 300px;
+  height: 320px;
+  margin: auto;            /* Pastikan center di grid */
 }
+
 
 .home__img-chips,
 .home__img-drink {
-  position: absolute;   /* Kunci untuk menumpuk */
-  height: auto;
+  position: absolute;
+  object-fit: contain;  /* gambar proporsional */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* animasi halus */
 }
+
 
 .home__img-drink {
-  /* Minuman (di belakang) */
-  width: 150px;         /* Lebar minuman (SESUAIKAN) */
+  width: 150px;
   top: 0;
   right: 0;
-  z-index: 1;           /* Lapis 1 (belakang) */
+  z-index: 1;
 }
-
 .home__img-chips {
-  /* Chips (di depan) */
-  width: 280px;         /* Lebar chips (SESUAIKAN) */
+  width: 280px;
   bottom: 0;
   left: 0;
-  z-index: 2;           /* Lapis 2 (depan) */
+  z-index: 2;
 }
 
 /*========== BUTTONS ==========*/
@@ -610,19 +613,18 @@ img {
         column-gap: 7rem;
     }
 
-    /* ATURAN BARU UNTUK LAYAR BESAR */
     .home__img-stack {
-      width: 500px;
-      height: 520px;  /* Sesuaikan */
-    }
+  width: 500px;
+  height: 520px;  /* Sesuaikan */
+}
 
-    .home__img-chips {
-      width: 450px;   /* Sesuaikan */
-    }
+.home__img-chips {
+  width: 450px;   /* Sesuaikan */
+}
 
-    .home__img-drink {
-      width: 250px;   /* Sesuaikan */
-    }
+.home__img-drink {
+  width: 250px;   /* Sesuaikan */
+}
 }   
 
 /* For tall screens on mobiles y desktop*/

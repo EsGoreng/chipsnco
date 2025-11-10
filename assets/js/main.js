@@ -98,7 +98,7 @@ const sr = ScrollReveal({
 });
 
 /* Selector .app__data dan .app__img dihapus dari daftar di bawah */
-sr.reveal(`.home__data, .home__img,
+sr.reveal(`.home__data, .home__img-stack,
             .about__data, .about__img,
             .services__content, .menu__content,
             .contact__data, .contact__button,
