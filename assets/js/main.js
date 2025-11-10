@@ -97,11 +97,10 @@ const sr = ScrollReveal({
     reset: true
 });
 
-/* Selector .app__data dan .app__img dihapus dari daftar di bawah */
 sr.reveal(`.home__data, .home__img-stack,
             .about__data, .about__img,
             .services__content, .menu__content,
-            .contact__data, .contact__button,
+            .contact__data, .contact__button, .section-subtitle, .section-title,
             .footer__content`, {
     interval: 200
 })
